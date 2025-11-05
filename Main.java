@@ -9,21 +9,24 @@ public class Main {
 
         while (true) {
             System.out.println("\nRepTrack");
-            System.out.println("""
-                1. Track Workout
-                2. View History
-                3. Quit""");
+
+            String menu = "1. Track Workout\n"
+                    + "2. View History\n"
+                    + "3. Quit";
+            System.out.println(menu);
+
             System.out.print("Make a selection: ");
             String input = scanner.nextLine().trim();
 
             switch (input) {
-                case "1" -> {
+                case "1": {
                     WorkoutTracker tracker = new WorkoutTracker();
                     tracker.addWorkout(scanner);
                     tracker.printLog();
                     history.add(tracker);
+                    break;
                 }
-                case "2" -> {
+                case "2": {
                     if (history.isEmpty()) {
                         System.out.println("No workouts logged yet.");
                     } else {
@@ -33,13 +36,17 @@ public class Main {
                             history.get(i).printLog();
                         }
                     }
+                    break;
                 }
-                case "3" -> {
+                case "3": {
                     System.out.println("Thank you for using RepTrack!");
                     scanner.close();
                     return;
                 }
-                default -> System.out.println("Invalid input. Please select 1, 2, or 3.");
+                default: {
+                    System.out.println("Invalid input. Please select 1, 2, or 3.");
+                    break;
+                }
             }
         }
     }
