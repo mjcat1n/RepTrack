@@ -8,7 +8,17 @@ public class Main {
         List<WorkoutTracker> history = new ArrayList<>();
 
         while (true) {
-            System.out.println("\nRepTrack");
+            System.out.println("\n\n" +
+                    "\n" +
+                    " _____         _______             _    \n" +
+                    "|  __ \\       |__   __|           | |   \n" +
+                    "| |__) |___ _ __ | |_ __ __ _  ___| | __\n" +
+                    "|  _  // _ \\ '_ \\| | '__/ _` |/ __| |/ /\n" +
+                    "| | \\ \\  __/ |_) | | | | (_| | (__|   < \n" +
+                    "|_|  \\_\\___| .__/|_|_|  \\__,_|\\___|_|\\_\\\n" +
+                    "           | |                          \n" +
+                    "           |_|                          \n" +
+                    "\n");
 
             String menu = "1. Track Workout\n"
                     + "2. View History\n"
